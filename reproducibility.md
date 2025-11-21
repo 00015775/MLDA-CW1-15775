@@ -1,6 +1,6 @@
 # Conda environments for effective and reproducible research
 
-* While the command `conda env export > environment.yml` does produce the list of all packages downloaded by both `conda` and `pip`, it certainly comes with its flaws. Basically, the packages listed within `conda env export > environment.yml` because apart from mentioning the specific package version, for some packages it can specify the system specific pacakage version. For instance, instead of writing as `1.23.4` for package version, it can for some packages write as `hbd8a1cb_0` for both manually installed and pre-installed packages. 
+* While the command `conda env export > environment.yml` does produce the list of all packages downloaded by both `conda` and `pip`, it certainly comes with its flaws. Basically, the packages listed within `conda env export > environment.yml` because apart from mentioning the specific package version, for some packages it can specify the system specific package version. For instance, instead of writing as `1.23.4` for package version, it can for some packages write as `hbd8a1cb_0` for both manually installed and pre-installed packages. 
 
 * This strange package versioning is called [build variant hash](https://docs.conda.io/projects/conda-build/en/latest/resources/variants.html#differentiating-packages-built-with-different-variants), and this versioning appears differently for different operating systems. The implication is that an environment file that contains a build variant hash for one or more of the packages **cannot be used on a different operating system (OS)** to the one it was created on. <u>**Basically includes system-specific low level packages, hence `conda env export > environment.yml` is not OS agnostic.**</u>
 
@@ -64,7 +64,7 @@ conda env create -f environment.yml
 ```
 * After getting the required packages and their respective versions, we can now activate the conda environment with the following code, but since for other projects the name of environment will be different for different projects, check the `name: conda_env_name` at the top of `environment.yml`.
 ```code
-conda activate bisp_islr_env
+conda activate ml_student_performance_env
 ```
 
 **Referece:**\
