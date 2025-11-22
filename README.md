@@ -1,6 +1,6 @@
 # Student Final Grade (G3) Prediction model
 
-**Python:** `3.11.14`
+**Python:** `3.11.14`   
 **conda (Anaconda):** `24.11.3`
 
 ## Project Description
@@ -88,3 +88,7 @@ MLDA-CW1-15775/
 * MSE
 * RMSE
 * $R^2$
+
+## Hyperparameter tunning 
+
+`GridSearchCV` was used for finding the best values for `n_estimators` for each tree-based models individually.
