@@ -1,8 +1,8 @@
 # Conda environments for effective and reproducible research
 
-* While the command `conda env export > environment.yml` does produce the list of all packages downloaded by both `conda` and `pip`, it certainly comes with its flaws. Basically, the packages listed within `conda env export > environment.yml` because apart from mentioning the specific package version, for some packages it can specify the system specific package version. For instance, instead of writing as `1.23.4` for package version, it can for some packages write as `hbd8a1cb_0` for both manually installed and pre-installed packages. 
+* While the command `conda env export > environments.yml` does produce the list of all packages downloaded by both `conda` and `pip`, it certainly comes with its flaws. Basically, the packages listed within `conda env export > environments.yml` because apart from mentioning the specific package version, for some packages it can specify the system specific package version. For instance, instead of writing as `1.23.4` for package version, it can for some packages write as `hbd8a1cb_0` for both manually installed and pre-installed packages. 
 
-* This strange package versioning is called [build variant hash](https://docs.conda.io/projects/conda-build/en/latest/resources/variants.html#differentiating-packages-built-with-different-variants), and this versioning appears differently for different operating systems. The implication is that an environment file that contains a build variant hash for one or more of the packages **cannot be used on a different operating system (OS)** to the one it was created on. <u>**Basically includes system-specific low level packages, hence `conda env export > environment.yml` is not OS agnostic.**</u>
+* This strange package versioning is called [build variant hash](https://docs.conda.io/projects/conda-build/en/latest/resources/variants.html#differentiating-packages-built-with-different-variants), and this versioning appears differently for different operating systems. The implication is that an environment file that contains a build variant hash for one or more of the packages **cannot be used on a different operating system (OS)** to the one it was created on. <u>**Basically includes system-specific low level packages, hence `conda env export > environments.yml` is not OS agnostic.**</u>
 
 * In order to solve listing of OS specific packages, ultimately producing reproducible OS agnostic conda environment for other people to use regarding of their operating system, we can add `--from-history` argument to the `conda env export` command. The full command is `conda env export --from-history -f conda_deps.yml`. The difference being with this command, is that it will only include the packages a person has explicitly installed with `conda install` and the version a person has requested to be installed. For example if you installed `numpy=1.24` this will be listed, but if you installed pandas without specifing the version conda will automatically try to install the latest pandas version of the given time, and pandas will be listed in your environment file <u>without a version number so anyone using your environment file will get the latest version which may not match the version you used</u>. This is one reason to explicitly state the version of a package you wish to install.
 
@@ -18,7 +18,7 @@
 
 * Since the conda env export `--from-history -f conda_deps.yml` does not include packages installed with `pip`, we can include them manually. We can create the `requirements.txt` file of all the `pip` packages installed along with their versions, with the command of `pip list --format=freeze > requirements.txt` 
 
-* Sometimes you may not specify the package versioning by simply using `conda install` or `pip install` along with the package name, the command of `conda env export --from-history -f conda_deps.yml` also will not specify the package versioning. This can be manually solved, by running `conda env export > environment.yml`, we can see the actual package version and simply copy and paste to the main `environment.yml`.
+* Sometimes you may not specify the package versioning by simply using `conda install` or `pip install` along with the package name, the command of `conda env export --from-history -f conda_deps.yml` also will not specify the package versioning. This can be manually solved, by running `conda env export > environments.yml`, we can see the actual package version and simply copy and paste to the main `environments.yml`.
 
 <div class="alert alert-block alert-success", style="font-weight: 600">
   Creating your project’s Conda environment from a single environment file is a Conda "best practice". Not only do you have a file to share with collaborators but you also have a file that can be placed under version control which further enhances the reproducibility of your research project and workflow.
@@ -58,11 +58,11 @@ dependencies:
 ```
 
 
-* Givent that `environment.yml` file is setup properly, the following code must be run inside of the directory where the `environment.yml` is located, usually at the root directory.
+* Givent that `environments.yml` file is setup properly, the following code must be run inside of the directory where the `environments.yml` is located, usually at the root directory.
 ```code
-conda env create -f environment.yml
+conda env create -f environments.yml
 ```
-* After getting the required packages and their respective versions, we can now activate the conda environment with the following code, but since for other projects the name of environment will be different for different projects, check the `name: conda_env_name` at the top of `environment.yml`.
+* After getting the required packages and their respective versions, we can now activate the conda environment with the following code, but since for other projects the name of environment will be different for different projects, check the `name: conda_env_name` at the top of `environments.yml`.
 ```code
 conda activate ml_student_performance_env
 ```

@@ -25,9 +25,9 @@ However if you want to `git clone` and make the program work locally, then do th
 
 2. `cd MLDA-CW1-15775`
 
-`environment.yml` related to this project should be at the root directory, and if not found, then `cd` to where it is located. The below given command, recreates the conda environment with exact package versions. After than, simply activate the conda environment.
+`environments.yml` related to this project should be at the root directory, and if not found, then `cd` to where it is located. The below given command, recreates the conda environment with exact package versions. After than, simply activate the conda environment.
 
-3. `conda env create -f environment.yml`
+3. `conda env create -f environments.yml`
 
 4. `conda activate ml_student_performance_env`
 
@@ -41,7 +41,7 @@ The model is already trained and saved in the corresponding folder, for more inf
 Streamlit will prompt to ask your gmail for its news feed, simply leave it empty(if you do not need that). After that, from the terminal you should see `Local URL:` or `Network URL:`, either of them if pasted to brower should open the website and you are ready to specify the inputs and get your predicted grade(G3).
 
 ---
-You can see two environment files listed here `requirements.txt` and `environment.yml`. Basically, `environment.yml` is used for recreating the conda environment which you should use, but `requirements.txt` is created only for the Streamlit app, since it cannot download dependencies from `.yml`
+You can see two environment files listed here `requirements.txt` and `environments.yml`. Basically, `environments.yml` is used for recreating the conda environment which you should use, but `requirements.txt` is created only for the Streamlit app, since it cannot download dependencies from `.yml`
 
 ---
 
