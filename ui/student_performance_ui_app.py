@@ -4,8 +4,11 @@ import joblib
 
 st.title("Student Final Grade (G3) Prediction App")
 
-rf_model = joblib.load("../src/models/rf_model.pkl")
-rf_features = joblib.load("../src/selected_features/rf_features.pkl")
+#rf_model = joblib.load("../src/models/rf_model.pkl")
+#rf_features = joblib.load("../src/selected_features/rf_features.pkl")
+
+rf_model = joblib.load("src/models/rf_model.pkl")
+rf_features = joblib.load("src/selected_features/rf_features.pkl")
 
 st.subheader("Please provide the student information")
 
