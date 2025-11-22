@@ -10,7 +10,7 @@
 
 
 ---
-The UI based on streamlit can be accessed publicly from the link which is hosted in streamlit's community cloud, **but do note if the number of website visitors is low** or even none, which is expected, <ins>the working link can switch to sleeping/hibernation mode<ins>. <ins>**This does not mean, the link will stop working**, but rather **it can take up from within 30 seconds to couple of minutes till the website wakes up** and is functional to use<ins>.
+The UI based on streamlit can be accessed publicly from the link which is hosted in streamlit's community cloud, **but do note if the number of website visitors is low** or even none, which is expected, **the working link can switch to sleeping/hibernation mode**. **This does not mean, the link will stop working**, but rather **it can take up from within 30 seconds to couple of minutes till the website wakes up** and is functional to use.
 
 **Streamlit App Link** (*give it some minutes to wake up*)
 
