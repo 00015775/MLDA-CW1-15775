@@ -21,8 +21,8 @@ The UI based on streamlit can be accessed publicly from the link which is hosted
 ## Prerequisities
 
 * `conda 24.11.3` (*if not available then follow the instructions [here](https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html#regular-installation) based on your OS. For this project Anaconda was used.*)
-
 * `Python 3.11.14`
+* `jupyter 1.1.1`
 
 ## Running the program locally
 
@@ -75,3 +75,16 @@ MLDA-CW1-15775/
 ├── .gitignore  
 └── README.md  
 ```
+
+## Machine Learning algorithms
+
+* Random Forest
+* XGBoost
+* LightGBM
+
+## Model evaluation metrics
+
+* MAE
+* MSE
+* RMSE
+* $R^2$
