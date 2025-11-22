@@ -1,6 +1,7 @@
 # Student Final Grade (G3) Prediction model
 
 **Python:** `3.11.14`
+**conda (Anaconda):** `24.11.3`
 
 ## Project Description
 
@@ -16,6 +17,12 @@ The UI based on streamlit can be accessed publicly from the link which is hosted
 `http://mlda-cw1-15775-student-performance-ui.streamlit.app `
 
 ---
+
+## Prerequisities
+
+* `conda 24.11.3` (*if not available then follow the instructions [here](https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html#regular-installation) based on your OS. For this project Anaconda was used.*)
+
+* `Python 3.11.14`
 
 ## Running the program locally
 
