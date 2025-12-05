@@ -37,7 +37,7 @@ However if you want to `git clone` and make the program work locally, then do th
 
 3. `conda env create -f environments.yml`
 
-4. `conda activate baltimore-crime_env`
+4. `conda activate baltimore_crime_env`
 
 
 The model is already trained and saved in the corresponding folder, for more info scroll below of where it is. Basically, to run the Streamlit ui app locally, run the following command, and if `.py` is not found, then `cd` to where the `baltimore-crime-app.py` is located.

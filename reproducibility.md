@@ -25,7 +25,7 @@
 </div>
 
 ```code
-name: ml_student_performance_env
+name: baltimore_crime_env
 channels:
   - conda-forge
   - defaults
@@ -64,7 +64,7 @@ conda env create -f environments.yml
 ```
 * After getting the required packages and their respective versions, we can now activate the conda environment with the following code, but since for other projects the name of environment will be different for different projects, check the `name: conda_env_name` at the top of `environments.yml`.
 ```code
-conda activate ml_student_performance_env
+conda activate baltimore_crime_env
 ```
 
 **Referece:**\
