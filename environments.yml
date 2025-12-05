@@ -1,4 +1,4 @@
-name: ml_student_performance_env
+name: baltimore-crime_env
 channels:
   - conda-forge
   - defaults

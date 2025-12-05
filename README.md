@@ -1,4 +1,5 @@
-# Student Final Grade (G3) Prediction model
+# REDOING ML WORK: changes to be commited.
+# Crime Description Prediction Based on Spatial-Temporal Data
 
 **Python:** `3.11.14`   
 **conda (Anaconda):** `24.11.3`
@@ -6,15 +7,15 @@
 ## Project Description
 
 
-*The user can specify 20 deterministic inputs features, and the model with 70% to 85% accuracy can provide the predicted final score (G3).*
+*This project applies classification models to Baltimore crime data to predict the description of a crime based on features like location, time, and premise type. The dataset includes major crimes against people reported under the NIBRS system.*
 
 
 ---
-The UI based on streamlit can be accessed publicly from the link which is hosted in streamlit's community cloud, **but do note if the number of website visitors is low** or even none, which is expected, **the working link can switch to sleeping/hibernation mode**. **This does not mean, the link will stop working**, but rather **it can take up from within 30 seconds to couple of minutes till the website wakes up** and is functional to use.
+The UI based on streamlit can be accessed publicly from the link which is hosted in streamlit's community cloud, **but do note if the number of website visitors is low** or even none, which is expected, **the working link can switch to sleeping/hibernation mode**. **This does not mean, the link will stop working**, but rather **it can take up couple of minutes till the website wakes up** and is functional to use.
 
 **Streamlit App Link** (*give it some minutes to wake up*)
 
-`http://mlda-cw1-15775-student-performance-ui.streamlit.app `
+`link-of-app-to-be-pasted`
 
 ---
 
@@ -36,13 +37,13 @@ However if you want to `git clone` and make the program work locally, then do th
 
 3. `conda env create -f environments.yml`
 
-4. `conda activate ml_student_performance_env`
+4. `conda activate baltimore-crime_env`
 
 
-The model is already trained and saved in the corresponding folder, for more info scroll below of where it is. Basically, to run the Streamlit ui app locally, run the following command, and if `.py` is not found, then `cd` to where the `student_performance_ui_app.py` is located.
+The model is already trained and saved in the corresponding folder, for more info scroll below of where it is. Basically, to run the Streamlit ui app locally, run the following command, and if `.py` is not found, then `cd` to where the `baltimore-crime-app.py` is located.
 
 
-5. `streamlit run ui/student_performance_ui_app.py` 
+5. `streamlit run ui/baltimore-crime-app.py` 
 
 
 Streamlit will prompt to ask your gmail for its news feed, simply leave it empty(if you do not need that). After that, from the terminal you should see `Local URL:` or `Network URL:`, either of them if pasted to brower should open the website and you are ready to specify the inputs and get your predicted grade(G3).
@@ -64,14 +65,13 @@ MLDA-CW1-15775/
 │   └── MLDA_CW1_15775.pdf          # project description
 │
 ├── src/            
-│   ├── Student_Performance.ipynb 
+│   ├── baltimore-crime-data.ipynb 
 │   ├── models/                     # contains trained models
 │   ├── plots/                      # any related diagrams
-│   ├── selected_features/          # selected features based on embedded methods
-│   └── student+performance/        # dataset itself
+│   └── data/                       # dataset itself
 │
 ├── ui/  
-│   └── student_performance_ui_app.py       
+│   └── baltimore-crime-app.py       
 ├── .gitignore  
 └── README.md  
 ```
@@ -84,10 +84,7 @@ MLDA-CW1-15775/
 
 ## Model evaluation metrics
 
-* MAE
-* MSE
-* RMSE
-* $R^2$
+* fixing
 
 ## Hyperparameter tunning 
 
