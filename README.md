@@ -28,22 +28,27 @@ The UI based on streamlit can be accessed publicly from the link which is hosted
 ## Running the program locally
 
 However if you want to `git clone` and make the program work locally, then do the following setups:
-
-1. `git clone https://github.com/00015775/MLDA-CW1-15775`
-
-2. `cd MLDA-CW1-15775`
+```shell
+git clone https://github.com/00015775/MLDA-CW1-15775
+```
+```shell
+cd MLDA-CW1-15775
+```
 
 `environments.yml` related to this project should be at the root directory, and if not found, then `cd` to where it is located. The below given command, recreates the conda environment with exact package versions. After than, simply activate the conda environment.
 
-3. `conda env create -f environments.yml`
-
-4. `conda activate baltimore_crime_env`
-
+```shell
+conda env create -f environments.yml
+```
+```shell
+conda activate baltimore_crime_env
+```
 
 The model is already trained and saved in the corresponding folder, for more info scroll below of where it is. Basically, to run the Streamlit ui app locally, run the following command, and if `.py` is not found, then `cd` to where the `baltimore-crime-app.py` is located.
 
-
-5. `streamlit run ui/baltimore-crime-app.py` 
+```shell
+streamlit run ui/baltimore-crime-app.py
+```
 
 
 Streamlit will prompt to ask your gmail for its news feed, simply leave it empty(if you do not need that). After that, from the terminal you should see `Local URL:` or `Network URL:`, either of them if pasted to brower should open the website and you are ready to specify the inputs and get your predicted grade(G3).
@@ -62,7 +67,7 @@ Reading the `reproducibility.md` is *completely optional*, it is a self-note for
 ```
 MLDA-CW1-15775/  
 ├── paper/
-│   └── MLDA_CW1_15775.pdf          # project description
+│   └── MLDA-CW1-15775-REPORT.pdf          # project description
 │
 ├── src/            
 │   ├── baltimore-crime-data.ipynb 
@@ -92,3 +97,5 @@ MLDA-CW1-15775/
 ## Hyperparameter tunning 
 
 `GridSearchCV` was used for finding the best values for `n_estimators` for Random Forest model individually. However, due to the time consuming nature of cross validation, for HistGradientBoostingClassifier and CatBoostClassifier the hyperparameters were chosen manually through heuristic experimentation of trying out different values for parameters such as `max_iter`, `learning_rate` and `depth`. Basically, the higher values for those parameters yielded better accuracy, however at the cost of computational power and time.
+
+#### As for the reference, most of the libraries, coding examples and information were learned from [GeeksForGeeks](https://www.geeksforgeeks.org)
