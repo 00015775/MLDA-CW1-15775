@@ -78,14 +78,17 @@ MLDA-CW1-15775/
 
 ## Machine Learning algorithms
 
-* Random Forest
-* XGBoost
-* LightGBM
+* RandomForestClassifier
+* HistGradientBoostingClassifier
+* CatBoostClassifier
 
 ## Model evaluation metrics
 
-* fixing
+* Accuracy
+* Precision
+* Recall
+* F1-score
 
 ## Hyperparameter tunning 
 
-`GridSearchCV` was used for finding the best values for `n_estimators` for each tree-based models individually.
+`GridSearchCV` was used for finding the best values for `n_estimators` for Random Forest model individually. However, due to the time consuming nature of cross validation, for HistGradientBoostingClassifier and CatBoostClassifier the hyperparameters were chosen manually through heuristic experimentation of trying out different values for parameters such as `max_iter`, `learning_rate` and `depth`. Basically, the higher values for those parameters yielded better accuracy, however at the cost of computational power and time.
